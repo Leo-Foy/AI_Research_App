@@ -201,7 +201,9 @@
     position: absolute;
     bottom: 0;
 }
-
+#messages li{
+  list-style-type: none;
+}
 
 
 /*BOOTSRAP CSS*/
