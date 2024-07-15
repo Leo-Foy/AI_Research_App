@@ -4,15 +4,14 @@ function post() {
     let value = input.value;
     var chatDiv = document.getElementById("messages");
     var message = document.createElement("li");
+    message.setAttribute("class", "bubble sender");
 
     message.appendChild(document.createTextNode(value));
     chatDiv.appendChild(message);
-    message.style.textAlign = "right";
-    message.style.paddingRight = "40px";
 
     input.value = "";;
     btn.disabled = true;
-    
+
     respond();
 }
 
@@ -21,6 +20,7 @@ var chatDiv = document.getElementById("messages");
 const words = value.split(" ");
 let index = 0;
 var message = document.createElement("li");
+message.setAttribute("class", "bubble receiver");
 function respond() {
     if (index < words.length) {
         
