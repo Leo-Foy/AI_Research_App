@@ -4,10 +4,16 @@ function post() {
     let value = input.value;
     var chatDiv = document.getElementById("messages");
     var message = document.createElement("li");
+    const img = document.createElement("img");
+    img.src = "penguin.jpg";
+    img.classList.add("avatar");
+
+
     message.setAttribute("class", "bubble sender");
 
     message.appendChild(document.createTextNode(value));
     chatDiv.appendChild(message);
+    message.appendChild(img);
 
     input.value = "";;
     btn.disabled = true;
@@ -15,22 +21,18 @@ function post() {
     respond();
 }
 
-let value = "Great! Let's get started.";
-var chatDiv = document.getElementById("messages");
-const words = value.split(" ");
-let index = 0;
-var message = document.createElement("li");
-message.setAttribute("class", "bubble receiver");
 function respond() {
-    if (index < words.length) {
-        
-        message.textContent += words[index] + " ";
-        chatDiv.appendChild(message);
-        index++;
-
-        setTimeout(respond, 200);
-    }
-
-    
+    let value = "Great! Let's get started.";
+    var chatDiv = document.getElementById("messages");
+    const words = value.split(" ");
+    let index = 0;
+    var message = document.createElement("li");
+    const img = document.createElement("img");
+        img.src = "penguin.jpg";
+        img.classList.add("avatar");
+    message.setAttribute("class", "bubble receiver");
+    message.appendChild(img);
+    message.appendChild(document.createTextNode(value));
+    chatDiv.appendChild(message);
 }
 
