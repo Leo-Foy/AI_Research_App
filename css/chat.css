@@ -5,21 +5,57 @@
     display:flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f9f9f9;
-    padding: 40px;
+    padding: 40px 40px 100px 40px;
     text-align: center;
     position: relative;
 }
 /*Chat Messages*/
+
 #messages li{
     list-style-type: none;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 12px;
+    margin-right: 12px;
 }
 
 .bubble {
     padding: 10px 15px;
     border-radius: 15px;
+    word-wrap: break-word;
+    display: flex;
+    align-items: center;
+    text-align: left; 
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+    width: 800px;
+}
+
+.sender {
+    margin-left: 200px;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.receiver {
+    margin-right: 200px;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.receiver:last-of-type {
+    margin-bottom: 150px;
+}
+/*
+.bubble {
+    padding: 10px 15px;
+    border-radius: 15px;
     margin: 10px;
-    margin-left: 275px;
+    margin-left: 100px;
     position: relative;
     max-width: 450px;
     clear: both;
@@ -33,9 +69,10 @@
     text-align: right;
     justify-content: flex-end;
     background-color: #ffe97d;
-    margin-right: 250px;
+    margin-right: 100px;
     align-self: flex-end;
     margin-left: auto;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
 }
 .receiver {
     background-color: #6ac1ff;
@@ -45,11 +82,4 @@
     margin-right: 500px;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
 }
-
-.avatar {
-    vertical-align: middle;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin: 2px;
-}
+*/

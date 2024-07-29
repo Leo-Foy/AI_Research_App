@@ -51,5 +51,19 @@
     </div>
 
     <script src="js/response.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          let input = document.getElementById("chatInput");
+          let btn = document.getElementById("post-btn");
+  
+          // Initial check to disable the button if the input box is empty
+          btn.disabled = !input.value.trim();
+  
+          input.addEventListener('input', function() {
+              // Enable/disable the button based on the input value
+              btn.disabled = !input.value.trim();
+          });
+        });
+      </script>
 </body>
 </html>
