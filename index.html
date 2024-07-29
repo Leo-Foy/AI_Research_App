@@ -14,7 +14,7 @@
             <button class = "new-chat"><a href= "Chat.html">New Chat</a></button> 
             <button class = "chat-history"><a href = "Chat-History.html">Chat History</a></button>
             <ul class = "main-menu">
-                <li><a href = ""><i class = "fas fa-robot"></i> AI Assistant</a></li>
+                <li><a href = "index.html"><i class = "fas fa-robot"></i> AI Assistant</a></li>
                 <li><a href = ""><i class = "fas fa-file-alt"></i> Content</a></li>
                <li><a href = ""><i class="fas fa-book"></i>My Library</a></li>
                <li><a href = ""><i class="fas fa-bullseye"></i>Goal Tracking</a></li>
@@ -43,7 +43,7 @@
                     <i class="fas fa-message"></i>
                 <h2>Ask Me Anything</h2>
                 <div class = " section-content">
-                    <p>Do you have any tips to manage stress? </p>
+                    <p onclick="postPromt(this)">Do you have any tips to manage stress? </p>
                     <p>I'm considering changing careers but feel uncertain. Any advice?</p>
                     <p>I'm feeling overwhelmed with my workload.What should I do?</p>
                 </div>
@@ -68,14 +68,33 @@
                 </div>
             </div>
             </div>
+            <div class="chat-log">
+                <ul id="messages">
+                    <!--insert list items dynamically when the user sends a message and when they get a response back-->
+                </ul>
+            </div>
             <div class = "chat-bar">
-                <input type = "text" placeholder =" Ask me anything!!!" id = "chatInput">
-                <button type = "button">Send</button>
+                <input type = "text" placeholder =" Ask me anything!" id = "chatInput">
+                <button type = "button" onclick="post()" id="post-btn">Send</button>
             </div>
             </div>
         </div>
 
     </div>
-    
+    <script src="js/response.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          let input = document.getElementById("chatInput");
+          let btn = document.getElementById("post-btn");
+  
+          // Initial check to disable the button if the input box is empty
+          btn.disabled = !input.value.trim();
+  
+          input.addEventListener('input', function() {
+              // Enable/disable the button based on the input value
+              btn.disabled = !input.value.trim();
+          });
+        });
+      </script>
 </body>
 </html>
