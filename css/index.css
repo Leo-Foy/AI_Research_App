@@ -193,6 +193,8 @@ header{
 #messages li{
     list-style-type: none;
     font-family: Arial, Helvetica, sans-serif;
+
+    overflow-y: auto;
 }
 
 .avatar {

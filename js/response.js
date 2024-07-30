@@ -1,5 +1,14 @@
+let input = document.getElementById("chatInput");
+
+input.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      document.getElementById("post-btn").click();
+    }
+});
+
 function post() {
-    let btn = document.getElementById("post-btn")
+    let btn = document.getElementById("post-btn");
     let input = document.getElementById("chatInput");
     let value = input.value;
     var chatDiv = document.getElementById("messages");
@@ -22,6 +31,7 @@ function post() {
 }
 
 function postPromt(promt) {
+    let btn = document.getElementById("post-btn");
     var value = promt.textContent;
     var chatDiv = document.getElementById("messages");
     var message = document.createElement("li");
@@ -30,14 +40,19 @@ function postPromt(promt) {
     img.classList.add("avatar");
 
     message.setAttribute("class", "bubble sender");
-
     message.appendChild(document.createTextNode(value));
     chatDiv.appendChild(message);
     message.appendChild(img);
+    
 
     btn.disabled = true;
+    
+    /*respond();*/
+    
+}
 
-    respond();
+function format () {
+    return Array.prototype.slice.call(arguments).join(' ')
 }
 
 function respond() {
