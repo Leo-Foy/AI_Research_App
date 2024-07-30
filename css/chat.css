@@ -9,6 +9,7 @@
     text-align: center;
     position: relative;
 }
+
 /*Chat Messages*/
 
 #messages li{
@@ -51,6 +52,92 @@
 .receiver:last-of-type {
     margin-bottom: 150px;
 }
+
+/*Dark Mode*/
+.darkMode-Container {
+    display:flex;
+    width: 100%;
+    background-color: #36393e;
+}
+
+.darkmode-sidebar {
+    width: 260px;
+    background-color: #36393e;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgb(211, 201, 201);
+}
+
+.darkmode-sidebar .darkmode-new-chat, .darkmode-sidebar .darkmode-chat-history {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #36393e;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.darkmode-sidebar .darkmode-new-chat:hover, .darkmode-sidebar .darkmode-chat-history:hover {
+    background-color: #5a6268;
+}
+
+.darkmode-sidebar ul {
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+}
+
+.darkmode-sidebar ul li {
+    width: 100%;
+}
+
+.darkmode-sidebar ul.darkmode-main-menu {
+    flex-grow: 1;
+}
+
+.darkmode-sidebar ul.darkmode-bottom-menu {
+    margin-top: auto;
+}
+
+.darkmode-sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.darkmode-sidebar ul li a i {
+    margin-right: 10px;
+}
+
+.darkmode-sidebar ul li a:hover {
+    background-color: #5a6268;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+/*Old styling*/
 /*
 .bubble {
     padding: 10px 15px;

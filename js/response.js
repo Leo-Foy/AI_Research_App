@@ -46,7 +46,8 @@ function postPromt(promt) {
     
 
     btn.disabled = true;
-    
+    /*mainContent.scrollTop = mainContent.scrollHeight;*/
+
     /*respond();*/
     
 }
@@ -70,3 +71,7 @@ function respond() {
     chatDiv.appendChild(message);
 }
 
+function darkMode() {
+    var mainContainer = document.getElementsByClassName("container");
+    mainContainer.classList.toggle("darkMode-Container");
+}
